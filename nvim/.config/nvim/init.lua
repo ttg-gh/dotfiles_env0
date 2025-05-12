@@ -17,10 +17,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- 플러그인 불러오기
-require("plugins")
+require("plugins.telescope")
 require("config.telescope")
-
+require("plugins.lsp")
 
 local builtin = require("telescope.builtin")
 
