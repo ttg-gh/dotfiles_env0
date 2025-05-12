@@ -25,6 +25,6 @@ require("config.telescope")
 local builtin = require("telescope.builtin")
 
 
-vim.keymap.set("n", "<leader>ff", function()
+vim.keymap.set("n", "<C-f>", function()
   require("telescope.builtin").find_files({ hidden = true })
 end, { desc = "Find Files (with dotfiles)" })
