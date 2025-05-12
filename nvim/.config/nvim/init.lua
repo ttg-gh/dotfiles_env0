@@ -19,3 +19,12 @@ vim.opt.rtp:prepend(lazypath)
 
 -- 플러그인 불러오기
 require("plugins")
+require("config.telescope")
+
+
+local builtin = require("telescope.builtin")
+
+
+vim.keymap.set("n", "<leader>ff", function()
+  require("telescope.builtin").find_files({ hidden = true })
+end, { desc = "Find Files (with dotfiles)" })
