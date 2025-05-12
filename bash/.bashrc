@@ -10,3 +10,14 @@ eval "$(starship init bash)"
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
+
+
+cd_tmux_fzf() {
+  local dir
+  dir=$(find ~/projects ~/work ~/ -type d -maxdepth 3 2>/dev/null | fzf) || return
+  cd "$dir" || return
+  local session_name
+  session_name=$(basename "$dir")
+  tmux new-session -A -s "$session_name"
+}
+bind -x '"\C-f": cd_tmux_fzf'
