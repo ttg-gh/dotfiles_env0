@@ -20,7 +20,8 @@ vim.opt.rtp:prepend(lazypath)
 require("plugins.telescope")
 require("config.telescope")
 require("plugins.lsp")
-
+--require("config.lsp")
+--require("config.cmp")
 local builtin = require("telescope.builtin")
 
 
