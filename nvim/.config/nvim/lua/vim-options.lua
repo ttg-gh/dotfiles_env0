@@ -10,8 +10,8 @@ vim.g.mapleader = " "
 
 vim.diagnostic.config({
   virtual_text = {
-    prefix = '●',  -- or '■', '▶', etc.
-    spacing = 4,
+    prefix = '■',  -- or '■', '▶', etc.
+    spacing = 6,
   },
   signs = true,
   underline = true,
