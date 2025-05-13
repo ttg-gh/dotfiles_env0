@@ -8,11 +8,20 @@ return {
 		--	hidden = true,
 		--})
 
-    vim.keymap.set('n', '<C-f>', function()
-      builtin.find_files({
-        hidden = true,
-        --no_ignore = true
-      })
-    end)
-	end
+		vim.keymap.set("n", "<C-f>", function()
+			builtin.find_files({
+				hidden = true,
+				--no_ignore = true
+			})
+		end)
+
+		vim.keymap.set("n", "<leader>ff", function()
+			builtin.live_grep({
+				--hidden = true,
+				additional_args = function()
+					return { "--hidden", "--no-ignore" }
+				end,
+			})
+		end)
+	end,
 }
