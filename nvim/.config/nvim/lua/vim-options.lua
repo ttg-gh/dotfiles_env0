@@ -7,10 +7,10 @@ vim.wo.relativenumber = true
 -- 기본 설정
 vim.g.mapleader = " "
 
-vim.nnoremap("<C-d>", "<C-d>zz")
-vim.nnoremap("<C-u>", "<C-u>zz")
-vim.nnoremap("n", "nzzzv")
-vim.nnoremap("N", "Nzzzv")
+-- vim.nnoremap("<C-d>", "<C-d>zz")
+-- vim.nnoremap("<C-u>", "<C-u>zz")
+-- vim.nnoremap("n", "nzzzv")
+-- vim.nnoremap("N", "Nzzzv")
 
 vim.diagnostic.config({
   virtual_text = {
