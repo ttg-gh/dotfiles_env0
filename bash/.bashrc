@@ -21,3 +21,12 @@ cd_tmux_fzf() {
   tmux new-session -A -s "$session_name"
 }
 bind -x '"\C-f": cd_tmux_fzf'
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
