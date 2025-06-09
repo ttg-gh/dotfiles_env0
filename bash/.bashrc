@@ -30,3 +30,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+
+# Created by `pipx` on 2025-06-08 06:20:18
+export PATH="$PATH:/home/ttg/.local/bin"
